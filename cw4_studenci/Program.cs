@@ -45,10 +45,21 @@ namespace Ćw_8_zajecia
             Console.WriteLine();
             Console.ReadLine();
         }
+        static double LiczSrednia(Student[] studenci)
+        {
+            int caloscOcen = 0;
 
- 
+            foreach (Student student in studenci)
+            {
+                caloscOcen += student.Ocena;
+            }
 
-   
+            double srednia = (double)caloscOcen / studenci.Length;
+            return srednia;
+        }
+
+
+
         static void Main(string[] args)
         {
             Student[] studenci = new Student[5];
@@ -59,7 +70,9 @@ namespace Ćw_8_zajecia
             Wypelnij_oceny(ref studenci[3], "Krakusek", 10003, 4, "Kobieta");
             Wypelnij_oceny(ref studenci[4], "Adamska", 10004, 5, "Kobieta");
 
-            Wyswietl(Student[2] studenci);
+            Wyswietl(LiczSrednia);
         }
+
+        
     }
 }
